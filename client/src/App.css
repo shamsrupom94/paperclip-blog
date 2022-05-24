@@ -32,7 +32,32 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  height: 3.5rem;
+  width: 100%;
+  background-color: #ffffff;
+  padding: .5% 5% .5%;
+  display: flex;
+  border-bottom: #c6c6c6 .5px solid;
+  position: fixed;
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+  padding: .25rem;
+  justify-content: flex-start;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  padding: .25rem;
+  justify-content: flex-end;
 }
