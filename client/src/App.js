@@ -1,12 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Layout } from "antd";
 
-function App() {
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import Post from "./pages/Post";
+
+import "antd/dist/antd.css";
+import "./App.css";
+
+const { Content } = Layout;
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <Layout className="layout">
+      <Header />
+      <Content style={{ padding: "60px 50px" }}>
+        <Home />
+        {/* <Post/> */}
+      </Content>
+    </Layout>
   );
-}
+};
 
 export default App;
