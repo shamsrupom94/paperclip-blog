@@ -118,6 +118,15 @@
   border-radius: 5px;
 }
 
+.post-previwer {
+  width: 90%;
+  min-height: 180px !important;
+  background-color: #ffffff;
+  margin: 1rem auto 0;
+  border: #c6c6c6 .5px solid;
+  border-radius: 5px;
+}
+
 
 @media screen and (max-width: 1100px) {
   .stat-section {

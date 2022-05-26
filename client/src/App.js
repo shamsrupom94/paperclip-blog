@@ -7,6 +7,7 @@ import Post from "./pages/Post";
 
 import "antd/dist/antd.css";
 import "./App.css";
+import AddPost from "./pages/AddPost";
 
 const { Content } = Layout;
 
@@ -15,8 +16,9 @@ const App = () => {
     <Layout className="layout">
       <Header />
       <Content style={{ padding: "60px 50px" }}>
-        <Home />
+        {/* <Home /> */}
         {/* <Post/> */}
+        <AddPost/>
       </Content>
     </Layout>
   );
