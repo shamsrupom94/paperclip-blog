@@ -8,6 +8,8 @@ import {
   Typography,
 } from "antd";
 
+import { PaperClipOutlined } from "@ant-design/icons";
+
 const menu = (
   <Menu style={{ marginTop: "8px" }}>
     <Menu.Item key="1">
@@ -24,7 +26,11 @@ const Header = () => {
     // <Layout.Header style={{backgroundColor:"white"}}>
     <div className="header">
       <div className="logo">
-        <Typography.Title level={4}>PaperClip Blog</Typography.Title>
+        <Typography.Title level={4}>
+          {" "}
+          <PaperClipOutlined />
+          PaperClip Blog
+        </Typography.Title>
       </div>
       <div className="menu">
         <Space>

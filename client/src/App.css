@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -56,7 +54,7 @@
 .site-layout-content {
   display: flex;
   align-content: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .left-static {
@@ -127,6 +125,39 @@
   border-radius: 5px;
 }
 
+.profile-bio {
+  width: 66.5%;
+  min-height: 80px !important;
+  background-color: #ffffff;
+  margin: 1rem auto auto;
+  border: #c6c6c6 .5px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.profile-bio img {
+  height: 17%;
+  width: 17%;
+  border: #c6c6c6 1.5px solid;
+  border-radius: 50%;
+  margin: .8rem;
+}
+
+.profile-contents {
+  width: 70%;
+  margin: 1rem auto 0;
+}
+
+.login-page {
+  width: 40%;
+  background-color: #ffffff;
+  margin: 2.5rem auto 2.5rem;
+  padding: 2rem;
+  border: #c6c6c6 .5px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+
 
 @media screen and (max-width: 1100px) {
   .stat-section {
@@ -148,6 +179,15 @@
     border: #c6c6c6 .5px solid;
     border-radius: 5px;
     background-color: #ffffff;
+    text-align: center;
+  }
+  .login-page {
+    width: 60%;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 2rem;
+    border: #c6c6c6 .5px solid;
+    border-radius: 5px;
     text-align: center;
   }
 }
@@ -187,5 +227,30 @@
     margin: 1rem auto 0;
     border: #c6c6c6 .5px solid;
     border-radius: 5px;
+  }
+
+  .profile-bio {
+    width: 95.5%;
+    min-height: 80px !important;
+    background-color: #ffffff;
+    margin: 1rem auto 0;
+    border: #c6c6c6 .5px solid;
+    border-radius: 5px;
+  }
+  
+  .profile-contents {
+    width: 100%;
+    margin: 1rem auto 0;
+  }
+
+  .login-page {
+    width: 85%;
+    background-color: #ffffff;
+    margin: auto;
+    margin-top: 15px;
+    padding: 2rem;
+    border: #c6c6c6 .5px solid;
+    border-radius: 5px;
+    text-align: center;
   }
 }

@@ -4,10 +4,13 @@ import { Layout } from "antd";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Post from "./pages/Post";
+import AddPost from "./pages/AddPost";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import SignUp from "./pages/Signup";
 
 import "antd/dist/antd.css";
 import "./App.css";
-import AddPost from "./pages/AddPost";
 
 const { Content } = Layout;
 
@@ -16,9 +19,12 @@ const App = () => {
     <Layout className="layout">
       <Header />
       <Content style={{ padding: "60px 50px" }}>
-        {/* <Home /> */}
+        <Home />
         {/* <Post/> */}
-        <AddPost/>
+        {/* <AddPost/> */}
+        {/* <Profile/> */}
+        {/* <Login/> */}
+        {/* <SignUp/> */}
       </Content>
     </Layout>
   );

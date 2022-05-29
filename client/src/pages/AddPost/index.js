@@ -111,7 +111,7 @@ const AddPost = () => {
         </div>
       </div>
       <Drawer
-        title="Basic Drawer"
+        title="Post Preview"
         placement="right"
         size="large"
         onClose={onClose}
