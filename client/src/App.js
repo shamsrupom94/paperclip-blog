@@ -9,7 +9,7 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import "./App.css";
 
 const { Content } = Layout;
@@ -19,9 +19,9 @@ const App = () => {
     <Layout className="layout">
       <Header />
       <Content style={{ padding: "60px 50px" }}>
-        <Home />
+        {/* <Home /> */}
         {/* <Post/> */}
-        {/* <AddPost/> */}
+        <AddPost/>
         {/* <Profile/> */}
         {/* <Login/> */}
         {/* <SignUp/> */}
