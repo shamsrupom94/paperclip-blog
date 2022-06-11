@@ -6,8 +6,10 @@ const {
   getSinglePost
 } = require("../controller/postController");
 
+const { routeProtection } = require("../config/authMiddleware");
+
 router.get("/all", getAllPublicPosts);
 router.get("/:id", getSinglePost);
-router.post("/create", createNewPost);
+router.post("/create", routeProtection, createNewPost);
 
 module.exports = router;

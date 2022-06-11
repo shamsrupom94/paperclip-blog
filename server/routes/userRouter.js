@@ -5,15 +5,18 @@ const {
   userLogin,
   getLoggedInUser,
   updateUserProfile,
-  updateProfilePicture,
+  changePassword,
+  getUserPublicInfo
 } = require("../controller/userController");
 const { routeProtection } = require("../config/authMiddleware");
 
 router.post("/create-user", createNewUser);
-router.get("/get-user", routeProtection, getLoggedInUser);
 router.post("/login", userLogin);
-router.post("/profile-update", updateUserProfile);
-router.post("/profile-picture-update", updateProfilePicture);
+router.get("/get-user", routeProtection, getLoggedInUser);
+router.put("/profile-update", routeProtection, updateUserProfile);
+router.put("/password-change", routeProtection, changePassword);
+router.get("/public-info/:id", getUserPublicInfo);
+
 
 
 module.exports = router;

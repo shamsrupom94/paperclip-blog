@@ -21,8 +21,8 @@ const App = () => {
       <Content style={{ padding: "60px 50px" }}>
         {/* <Home /> */}
         {/* <Post/> */}
-        <AddPost/>
-        {/* <Profile/> */}
+        {/* <AddPost/> */}
+        <Profile/>
         {/* <Login/> */}
         {/* <SignUp/> */}
       </Content>
