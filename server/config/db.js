@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-
+const { MONGO_URI } = require("../../tempEnv");
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://shams:shams1994@merncluster.fvtuw.mongodb.net/paperclip-blog?retryWrites=true&w=majority")
+    const conn = await mongoose.connect(MONGO_URI)
     console.log(`MongoDB Connected: ${conn.connection.host}`)
   } catch (error) {
     console.log(error)

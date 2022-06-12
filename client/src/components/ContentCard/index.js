@@ -1,19 +1,18 @@
 import React from "react";
 import { Button, Space, Tag, Avatar, Typography } from "antd";
 
-const ContentCard = () => {
+const ContentCard = ({post}) => {
   return (
     <div className="content-card">
       <div style={styleSheet.cardNameSection}>
         <Space>
-          <Avatar src="https://joeschmoe.io/api/v1/random" />
-          <Typography.Title level={5}>Shams Ibne Noor</Typography.Title>
+          <Avatar src={post?.postedBy?.profilePicture} />
+          <Typography.Title level={5}>{post?.postedBy?.name}</Typography.Title>
         </Space>
       </div>
       <div style={styleSheet.cardTextSection}>
         <Typography.Title level={3}>
-          Code Assignment That I Got During My Web Developer Interview - Episode
-          1 Episode 1Episode 1Episode 1Episode 1 Episode 1
+          {post?.title}
         </Typography.Title>
         <Tag color="error">Romance</Tag>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route, Routes, Redirect } from "react-router-dom";
 import { Layout } from "antd";
 
 import Home from "./pages/Home";
@@ -19,12 +20,16 @@ const App = () => {
     <Layout className="layout">
       <Header />
       <Content style={{ padding: "60px 50px" }}>
-        <Home />
-        {/* <Post/> */}
-        {/* <AddPost/> */}
-        {/* <Profile/> */}
-        {/* <Login/> */}
-        {/* <SignUp/> */}
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/post/:id" element={<Post />} />
+            <Route exact path="/add-post" element={<AddPost />} />
+            <Route exact path="/profile/:id" element={<Profile />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/sign-up" element={<SignUp />} />
+          </Routes>
+        </BrowserRouter>
       </Content>
     </Layout>
   );

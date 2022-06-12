@@ -3,12 +3,12 @@ const Post = require("../model/PostModel");
 const User = require("../model/UserModel");
 
 const getAllPublicPosts = asyncHandler(async (req, res) => {
-  const skip = req.query.skip ? Number(req.query.skip) : 0;
+  const PAGE = req.query.page ? Number(req.query.page) : 0;
   const DEFAULT_LIMIT = 5;
 
   const publicPosts = await Post.find({ isPrivate: false })
     .populate("postedBy", "name profilePicture")
-    .skip(skip)
+    .skip(PAGE * DEFAULT_LIMIT)
     .limit(DEFAULT_LIMIT);
 
   if (!publicPosts) {
@@ -53,14 +53,14 @@ const getSinglePost = asyncHandler(async (req, res) => {
 });
 
 const getPostByUser = asyncHandler(async (req, res) => {
-  const skip = req.query.skip ? Number(req.query.skip) : 0;
+  const PAGE = req.query.page ? Number(req.query.page) : 0;
   const DEFAULT_LIMIT = 5;
 
   const allPosts = await Post.find({
     $and: [{ postedBy: req.params.id }, { isPrivate: false }],
   })
     .populate("postedBy", "name profilePicture")
-    .skip(skip)
+    .skip(PAGE * DEFAULT_LIMIT)
     .limit(DEFAULT_LIMIT);
   
   if(!allPosts) {

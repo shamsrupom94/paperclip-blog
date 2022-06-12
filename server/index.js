@@ -2,9 +2,21 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 const connectDB = require("./config/db");
-require('dotenv').config();
+const cors = require('cors');
 
-const PORT = process.env.BACKEND_PORT || 5000;
+const {BACKEND_PORT} = require("../tempEnv");
+require('dotenv').config({ path: "./.env" });
+
+const PORT = process.env.NODE_ENV === "development" ? 5000 : BACKEND_PORT;
+
+const corsOptions ={
+   origin:'*', 
+   credentials:true,
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
+
 
 //Router files
 const PostRouter = require("./routes/postRouter");
