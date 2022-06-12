@@ -22,6 +22,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     email,
     address,
     password: hashedPassword,
+    totalPosts: 0
   });
 
   if (newUser) {
@@ -30,7 +31,8 @@ const createNewUser = asyncHandler(async (req, res) => {
       name: newUser.name,
       email: newUser.email,
       address: newUser.address,
-      token: generateWebToken(userExists._id),
+      token: generateWebToken(newUser.id)
+      
     });
   } else {
     return res.status(400).json({ message: "Invalid user data" });
@@ -59,7 +61,6 @@ const userLogin = asyncHandler(async (req, res) => {
       email: userExists.email,
       address: userExists.address,
       token: generateWebToken(userExists._id),
-      totalPosts: 0,
     });
   } else {
     return res.status(400).json({ message: "Invalid credentials" });

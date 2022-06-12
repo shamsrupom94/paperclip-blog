@@ -19,10 +19,10 @@ const App = () => {
     <Layout className="layout">
       <Header />
       <Content style={{ padding: "60px 50px" }}>
-        {/* <Home /> */}
+        <Home />
         {/* <Post/> */}
         {/* <AddPost/> */}
-        <Profile/>
+        {/* <Profile/> */}
         {/* <Login/> */}
         {/* <SignUp/> */}
       </Content>
